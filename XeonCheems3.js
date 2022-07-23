@@ -305,28 +305,28 @@ const reply = (teks) => {
             XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": `Subscribe YouTube Channel`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./XeonMedia/theme/cheemspic.jpg`),"sourceUrl": `${linkz2}`}}}, { quoted: m})
         }
         //auto reply by xeon
-  
+  //if (Autoreply) //remove forwad slashes to make it autoreply on off
         for (let anji of setik){
 				if (budy === anji){
 					result = fs.readFileSync(`./XeonMedia/sticker/${anji}.webp`)
 					XeonBotInc.sendMessage(m.chat, { sticker: result }, { quoted: m })
 					}
 			}
-			  
+			  //if (Autoreply) //remove forwad slashes to make it autoreply on off
 			for (let anju of vien){
 				if (budy === anju){
 					result = fs.readFileSync(`./XeonMedia/audio/${anju}.mp3`)
 					XeonBotInc.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
 					}
 			}
-			
+			  //if (Autoreply) //remove forwad slashes to make it autoreply on off
 			for (let anjh of imagi){
 				if (budy === anjh){
 					result = fs.readFileSync(`./XeonMedia/image/${anjh}.jpg`)
 					XeonBotInc.sendMessage(m.chat, { image: result }, { quoted: m })
 					}
 			}
-			  
+			  //if (Autoreply) //remove forwad slashes to make it autoreply on off
 					for (let anjh of videox){
 				if (budy === anjh){
 					result = fs.readFileSync(`./XeonMedia/video/${anjh}.mp4`)
@@ -1600,7 +1600,7 @@ if (isBanChat) return reply(mess.banChat)
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 	                let btn = [{
                                 urlButton: {
-                                    displayText: 'YouTube 🍒',
+                                    displayText: 'Tiktok🍒',
                                     url: `${websitex}`
                                 }
                             }, {
@@ -1635,7 +1635,7 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                         XeonBotInc.send5ButMsg(m.chat, menulist, global.botname, btn)
                         } else if (setbot.templateDocument) {
                         let buttonmenu = [
-        	{ urlButton: { displayText: `YouTube 🍒`, url : `${websitex}` } },
+        	{ urlButton: { displayText: `Instagram 🍒`, url : `${websitex}` } },
             { urlButton: { displayText: `Script 🍜`, url: `${botscript}` } },
             { quickReplyButton: { displayText: `All Menu 🍱`, id: 'allmenu'} },
             { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} },
@@ -1651,7 +1651,7 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 let buttonmenu = [
-        	{ urlButton: { displayText: `YouTube 🍒`, url : `${websitex}` } },
+        	{ urlButton: { displayText: `Instagram 🍒`, url : `${websitex}` } },
             { urlButton: { displayText: `Script 🍜`, url: `${botscript}` } },
             { quickReplyButton: { displayText: `All Menu 🍱`, id: 'allmenu'} },
             { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} },
@@ -1662,7 +1662,10 @@ let buttonmenu = [
 case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-teks = `*「 ${global.botname} Script 」*\n\nYouTube: ${global.websitex}\nGitHub: ${global.botscript}\n\nDont forget to donate 🍜`
+teks = `*「 ${global.botname} Script 」*\n\nTiktok: ${global.websitex}\nGitHub: ${global.botscript}\n\n*DON'T FORGET TO DONATE THROUGH FUNDS OR PULSE*
+
+*DANA : 0899-0374-749*
+*PULSE : 0899-0374-749*🍜`
 let buttons = [
 {buttonId: `menu`, buttonText: {displayText: 'Menu 🌺'}, type: 1}
 ]
@@ -9275,7 +9278,9 @@ break
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Hi ${pushname}`,
-                    description: `Please Choose The Menu\n\n`,
+                    description: `Please Choose The Menu
+*DONATE ME DANA OR PULSA*
+*[0899-0374-749]*\n\n`,
                     buttonText: "Menu",
                     footerText: `${global.botname}`,
                     listType: "SINGLE_SELECT",
@@ -10945,8 +10950,9 @@ case 'tqtt':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(`Thanks to
-LORD BUDDHA
-Xeon (Me)
+Xeon
+Randy
+Wranz
 My family
 And all friends who helped assemble this sexy script !!!`)
 break
